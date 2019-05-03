@@ -13,28 +13,24 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-custom navbar-expand-md navbar-light fixed-navbar">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.html"><img src="images/logo-small.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="introduction.html">회사소개</a>
+					<a class="nav-link" href="introduction.html">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="fishing.html">낚시투어</a>
+					<a class="nav-link" href="fishing.html">Services</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="snowmobile.html">스노우머신투어</a>
+					<a class="nav-link" href="contact.html">Contact</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="custom-tour.html">맟춤형관광</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">관광문의</a>
+					<a class="nav-link" href="custom-tour.html">Schedule Appointment</a>
 				</li>
 			</ul>
 		</div>
@@ -51,56 +47,75 @@
 	</div>
 </div> 
 <!--- Two Column Section -->
-<section class="section2">
-	<div class="container-fluid">
-		<div class="row text-center">
-			<div class="col">
-				<p style="font-size: 1em; font-weight: 700;">알라스카 익스트림 투어</p>
-				<h2>고객의 연락을 기다리겠습니다.</h2>
-				<hr>
-				<p>고객 한분 한분의 모든 의견과 질문을 소중하게 생각합니다.</p>
-				<p>전화 또는 이메일 중 편하신 방법으로 언제든지 연락주시기 바랍니다.</p>
-			</div>
+<section class="section2 container-fluid">
+	<div class="row text-center">
+		<div class="col">
+			<h2>Contact Us</h2>
+			<hr>
+			<p>We value what our customers have to say</p>
+			<p>Please feel free to message us below or contact us by phone or email.</p>
 		</div>
-		<div class="d-flex flex-row justify-content-center flex-wrap">
-			<div class="col-md-3 text-center">
-				<i class="fas fa-map-marker-alt" style="font-size:2em;margin-top: 40px;"></i>
-				<p class="caption"><b>회사주소</b></p>
-				<a href="https://www.google.com/maps/place/511+Patsy+St,+Anchorage,+AK+99504/@61.2177298,-149.7445742,17z/data=!3m1!4b1!4m5!3m4!1s0x56c89699361be245:0x6525c59aa29a3fee!8m2!3d61.2177298!4d-149.7423855?ved=2ahUKEwj3rqjt4JHhAhWIc98KHfP0B4oQ8gEwAHoECAoQAQ&shorturl=1" target="_blank" style="text-decoration: none;color: black;">511 Patsy St.<br>Anchorage, AK 99504</a>
-			</div>
-			<div class="col-md-3 text-center">
-				<i class="fas fa-envelope" style="font-size:2em;margin-top: 40px;"></i>
-				<p class="caption"><b>연락처</b></p>
-				<a href="tel:1902279029">+1 (907) 227-9029</a>
-				<br>
-				<a href="tel:1902235509">+1 (907) 223-5509</a>
-				<br>
-				<a href="mailto:alaskaextremetour@gmail.com">Email Us!</a>
-				<p>(모든 전화 카톡 환영)</p>
-			</div>
-			<div class="col-md-3 text-center">
-				<i class="fas fa-clock" style="font-size:2em;margin-top: 40px;"></i>
-				<p class="caption"><b>업무시간</b></p>
-				<p>월요일 - 토요일</p>
-				<p>오전 9:00 - 오후 7:00</p>
-				<p>업무 외 요일 또는 시간에는 메세지를 남겨주시십시요.</p>
-			</div>
+	</div>
+	<div class="row mx-auto map-form">
+		<div class="col-sm-4 col-xs-12 ml-auto" id="googleMap">
 		</div>
-		<form>
-			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contact Name">
-			</div>
-			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
-			</div>
-			<div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Subject">
-			</div>
-			<div class="form-group">
-				<textarea class="form-control" rows="6" placeholder="Message"></textarea>
-			</div>
-			<button type="submit" class="btn btn-primary btn-block">Submit</button>
+		<!-- //put into js later -->
+		<script>
+			function myMap() {
+				var mapProp= {
+					center:new google.maps.LatLng(34.054562,-118.30896),
+					zoom:16,
+				};
+				var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				var marker = new google.maps.Marker({
+					position:{lat: 34.054562, lng: -118.30896},
+					map: map,
+					title: 'Bio Beauty Skincare'
+				});
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJR8LDmpcTedkCBdiGmitwYAuuuQ1DLdo&callback=myMap"></script>
+		<form class="col-sm-6 col-xs-12 mr-auto message" action="https://formspree.io/hc9825@gmail.com" method="POST">
+			<fieldset>
+				<legend>Send us a Message</legend>
+				<label class="form-group">
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contact Name" name="name">
+				</label>
+				<label class="form-group">
+					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email" name="name">
+				</label>
+				<label class="form-group">
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Subject" name="name">
+				</label>
+				<label class="form-group">
+					<textarea class="form-control" rows="6" placeholder="Message" name="name"></textarea>
+				</label>
+				<button type="submit" class="btn btn-primary btn-block">Submit</button>
+			</fieldset>
 		</form>
+	</div>
+	<div class="d-flex flex-row justify-content-center flex-wrap">
+		<div class="col-md-3 text-center">
+			<i class="fas fa-map-marker-alt" style="font-size:2em;margin-top: 40px;"></i>
+			<p class="caption"><b>Address</b></p>
+			<a href="https://www.google.com/maps/place/928+S+Western+Ave,+Los+Angeles,+CA+90006/@34.0551603,-118.3105748,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b88659a62e85:0x553e6746c41618fd!8m2!3d34.0551603!4d-118.3083861" target="_blank" style="text-decoration: none;color: black;">928 S. Western Ave<br>Unit #305<br>Los Angeles, CA 90006</a>
+		</div>
+		<div class="col-md-3 text-center">
+			<i class="fas fa-envelope" style="font-size:2em;margin-top: 40px;"></i>
+			<p class="caption"><b>Contact Info</b></p>
+			<p>Call Us!</p>
+			<a href="tel:12137184878">+1 (213) 718-4878</a>
+			<br>
+			<p>Email Us!</p>
+			<a href="mailto:biobeauty@skincare.com"><b>biobeauty@skincare.com</b></a>
+		</div>
+		<div class="col-md-3 text-center">
+			<i class="fas fa-clock" style="font-size:2em;margin-top: 40px;"></i>
+			<p class="caption"><b>업무시간</b></p>
+			<p>Mon-Sat</p>
+			<p>10:00 AM - 8PM</p>
+			<p>Sun (Appt Only)</p>
+		</div>
 	</div>
 </section>
 <!-- Footer -->

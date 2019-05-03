@@ -44,10 +44,11 @@ function carouselBannerHeader() {
 
 $(window).scroll(function() {
 	var height = $(window).scrollTop();
+	console.log('das');
 	if (height > 100) {
 			$('.scroll-up').fadeIn();
 	} else {
-			$('.scroll-upr').fadeOut();
+			$('.scroll-up').fadeOut();
 	}
 });
 $(document).ready(function() {
