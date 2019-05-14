@@ -1,5 +1,5 @@
 function carouselBannerHeader() {
-  var dataText = ["Bright", "Blissful", "Beautiful", "Bio Beauty Skincare"];
+  var dataText = ["Revive", "Rejuvenate", "Refresh", "Bio Beauty Skincare"];
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished

@@ -24,10 +24,9 @@ body {
 }
 
 .first-navbar .container-fluid .navbar-nav .nav-item .nav-link {
-  color: white;
+  color: black;
   margin-left: 30px;
   font-size: 1.2rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .first-navbar ul li a {
