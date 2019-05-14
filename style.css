@@ -24,7 +24,8 @@ body {
 }
 
 .first-navbar .container-fluid .navbar-nav .nav-item .nav-link {
-  color: black;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   margin-left: 30px;
   font-size: 1.2rem;
 }
@@ -41,7 +42,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: white;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
